@@ -1,6 +1,4 @@
-import {RpsChoice} from './RpsResponse';
-
 export interface RpsRequest {
-  userChoice: RpsChoice;
+  userChoice: string;
   withWell: boolean;
 }
