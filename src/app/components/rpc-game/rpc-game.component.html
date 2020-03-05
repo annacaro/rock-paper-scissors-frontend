@@ -1,9 +1,15 @@
+<label>
+  <input type="checkbox" name="well" [(ngModel)]="withWell">
+  With Well
+</label>
+<br>
 <button (click)="getWinner('Rock')">ROCK</button>
 <button (click)="getWinner('Paper')">PAPER</button>
 <button (click)="getWinner('Scissors')">SCISSORS</button>
+<button *ngIf="withWell" (click)="getWinner('Well')">WELL</button>
 
 <div *ngIf="winnerResponse$ | async as response">
   <div>Your Choice: {{response.userChoice}}</div><br>
   <div>Computer Choice: {{response.computerChoice}}</div><br>
-  <div>The Winner is: {{response.winner}}</div>
+  <div><strong>{{response.winner}}</strong></div>
 </div>
