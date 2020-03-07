@@ -9,7 +9,7 @@
 <button *ngIf="withWell" (click)="getWinner('Well')">WELL</button>
 
 <div *ngIf="winnerResponse$ | async as response">
-  <div>Your Choice: {{response.userChoice}}</div><br>
-  <div>Computer Choice: {{response.computerChoice}}</div><br>
-  <div><strong>{{response.winner}}</strong></div>
+  <div id="user-choice">Your Choice: {{response.userChoice}}</div><br>
+  <div id="computer-choice">Computer Choice: {{response.computerChoice}}</div><br>
+  <div id="winner"><strong>{{response.winner}}</strong></div>
 </div>
